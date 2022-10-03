@@ -12,16 +12,16 @@
 Console.Clear();
 Console.WriteLine("Введите строки через пробел");
 string element = Console.ReadLine();
-string[] M = element.Split(' '); ;
-var result = new string[M.Length];
-var elementSize = 0;
-foreach (var value in M)
+string[] array = element.Split(' '); ;
+var result = new string[array.Length];
+var count = 0;
+foreach (var value in array)
 {
     
     if (value.Length <= 3)
     {
-        result[elementSize] = value;
-        elementSize++;
+        result[count] = value;
+        count++;
     }
 }
-Console.WriteLine(string.Join(Environment.NewLine, result, 0, elementSize));
+Console.WriteLine(string.Join(Environment.NewLine, result, 0, count));
